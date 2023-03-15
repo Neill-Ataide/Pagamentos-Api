@@ -6,7 +6,12 @@ import java.util.Objects;
 
 import uea.pagamentos_api.enums.TipoLancamento;
 
-public class Lancamento {
+@Entity
+public class Lancamento implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo; 
 	private String descricao;
 	private LocalDate dataVencimento;
